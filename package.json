@@ -1,0 +1,21 @@
+{
+  "name": "assemble-buttons",
+  "version": "1.0.0",
+  "description": "Buttons for the Assemble CSS Framework.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Luke Larsen",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lukelarsen/assemble-buttons"
+  },
+  "dependencies": {
+    "object-assign": "^4.0.1",
+    "postcss": "^5.0.0",
+    "postcss-assemble-button-helper": "^1.0.0"
+  },
+  "devDependencies": {}
+}
