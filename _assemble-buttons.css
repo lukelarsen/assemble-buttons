@@ -27,7 +27,8 @@
     margin: 0;
     padding: $btn-padding;
     transition: all 0.2s ease-in-out;
-    border: 0;
+    border-width: $btn-border-size;
+    border-style: solid;
     outline: none;
     background-color: #000;
     cursor: pointer;
