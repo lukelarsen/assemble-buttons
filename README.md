@@ -156,6 +156,7 @@ Will give you:
 .btn--small{
     font-size: calc($btn-default-font-size / $btn-size-ratio);
 }
+```
 
 ##### $btn--block
 - Default: false;
