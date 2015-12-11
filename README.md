@@ -28,6 +28,16 @@ gulp.task('css', function () {
         .pipe(gulp.dest('./dest'));
 });
 ```
+Then import the _assemble-buttons.css file from your css file.
+```css
+@import '../node_modules/assemble-base/base';
+
+/*
+Override variable here before the assemble components are loaded.
+*/
+
+@import '../node_modules/assemble-buttons/assemble-buttons';
+```
 
 ## Options
 Options are set with variables. These variables are already set with their default values so they will just work out of the box. If you wish to change them just define the variable you want to change before you load the _assemble-modals.css file. You may wish you see [Assemble Base] for more examples and directions for setting up a Assemble project.
