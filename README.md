@@ -1,11 +1,11 @@
 [Assemble]:                http://assemblecss.com
-[Assemble Core]:           https://github.com/lukelarsen/assemble-core
+[Assemble Base]:           https://github.com/lukelarsen/assemble-base
 
 # Assemble Buttons
 Assemble Buttons is a component of the [Assemble] CSS Framework. It will give you a solid base for buttons in your project. It has some default styles that can easily be overridden so you can add your own look.
 
 ## Requirements
-Assemble Buttons requires [Assemble Core].
+Assemble Buttons requires [Assemble Base].
 
 ## Installation
 npm install assemble-buttons --save-dev
@@ -30,7 +30,7 @@ gulp.task('css', function () {
 ```
 
 ## Options
-Options are set with variables. These variables are already set with their default values so they will just work out of the box. If you wish to change them just define the variable you want to change before you load the _assemble-modals.css file. You may wish you see [Assemble Core] for more examples and directions for setting up a Assemble project.
+Options are set with variables. These variables are already set with their default values so they will just work out of the box. If you wish to change them just define the variable you want to change before you load the _assemble-modals.css file. You may wish you see [Assemble Base] for more examples and directions for setting up a Assemble project.
 
 ### Design Variables
 
