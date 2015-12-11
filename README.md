@@ -15,12 +15,12 @@ npm install assemble-buttons --save-dev
 ```js
 var gulp = require('gulp');
 var postcss = require('gulp-postcss');
-var assembleCore = require('assemble-core');
+var assembleBase = require('assemble-base');
 var assembleButtons = require('assemble-buttons');
 
 gulp.task('css', function () {
     var processors = [
-        assembleCore,
+        assembleBase,
         assembleButtons
     ];
     return gulp.src('./src/*.css')
