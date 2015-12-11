@@ -20,12 +20,7 @@ var assembleButtons = require('assemble-buttons');
 
 gulp.task('css', function () {
     var processors = [
-        assembleCore({
-            zLayerValues: {
-                'modal': 9,
-                'tip': 10
-            }
-        }),
+        assembleCore,
         assembleButtons
     ];
     return gulp.src('./src/*.css')
@@ -40,6 +35,7 @@ Options are set with variables. These variables are already set with their defau
 ### Design Variables
 
 ##### $btn-size-ratio
+- Set how quickly the buttons scale.
 - Default: 1.2;
 - Type: Number
 ```css
@@ -47,44 +43,41 @@ $btn-size-ratio: 1;
 ```
 
 ##### $btn-padding
+- Button padding. Can have single or multiple values.
 - Default: 0.7em;
 - Type: Number
-- It can be multiple values with a max of four (see example). It can also take any unit type.
 ```css
 $btn-padding: 5px 10px;
 ```
 
 ##### $btn-default-font-size
+- The default button font size
 - Default: 100%;
 - Type: Number
-- It can take any unit type.
 ```css
 $btn-padding: 5px 10px;
 ```
 
 ##### $btn-border-size
+- The size of the button border. Is only used if border-color is used.
 - Default: 1px;
 - Type: Number
-- It can take any unit type.
-- It is only used if a border-color is set when creating button colors. See colors below.
 ```css
 $btn-border-size: 2px;
 ```
 
 ##### $btn-disabled-bg-color
+- The background color of a disabled button. Is only used if $btn-disabled is true.
 - Default: #DDD;
 - Type: Color
-- It should be hex or rgba.
-- It is only used if $btn--disabled is true. See below.
 ```css
 $btn-disabled-bg-color: #BBB;
 ```
 
 ##### $btn-disabled-text-color
+- The text color of a disabled button. Is only used if $btn-disabled is true.
 - Default: #777;
 - Type: Color
-- It should be hex or rgba.
-- It is only used if $btn--disabled is true. See below.
 ```css
 $btn-disabled-text-color: #EEE;
 ```
@@ -126,15 +119,19 @@ Will output:
     border-color: red;
 }
 ```
+Usage
+```html
+<a class="btn  btn--primary">Primary Button</a>
+```
 
 ### Modifier Variables
 
 #### Button Sizes
 
 ##### $btn--large
+- Turn on/off large buttons for your application. If set to true a .btn--large class will be generated.
 - Default: false;
 - Type: Boolean
-- If true the css for large buttons will be loaded.
 ```css
 $btn-large: true;
 ```
@@ -144,11 +141,16 @@ Will give you:
     font-size: calc($btn-default-font-size * $btn-size-ratio);
 }
 ```
+Usage
+```html
+<a class="btn  btn--large">Primary Button</a>
+<a class="btn  btn--primary  btn--large">Primary Button</a>
+```
 
 ##### $btn--small
+- Turn on/off small buttons for your application. If set to true a .btn--small class will be generated.
 - Default: false;
 - Type: Boolean
-- If true the css for small buttons will be loaded.
 ```css
 $btn--small: true;
 ```
@@ -158,11 +160,16 @@ Will give you:
     font-size: calc($btn-default-font-size / $btn-size-ratio);
 }
 ```
+Usage
+```html
+<a class="btn  btn--small">Primary Button</a>
+<a class="btn  btn--primary  btn--small">Primary Button</a>
+```
 
 ##### $btn--block
+- Turn on/off block buttons for your application. If set to true a .btn--block class will be generated.
 - Default: false;
 - Type: Boolean
-- If true the css for block butons will be loaded.
 ```css
 $btn-block: true;
 ```
@@ -174,14 +181,18 @@ Will give you:
     text-align: center;
 }
 ```
+Usage
+```html
+<a class="btn  btn--block  btn--primary">Block Primary Button</a>
+```
 
 #### Button Types
 
 ##### $btn--natural
+- Turn on/off natural buttons for your application. If set to true a .btn--natural class will be generated.
+- Use this if you'd like buttons to appear in the middle of sentences.
 - Default: false;
 - Type: Boolean
-- If true the css for natural buttons will be loaded.
-- Use this if you'd like buttons to appear in the middle of sentences.
 ```css
 $btn--natural: true;
 ```
@@ -196,12 +207,16 @@ Will give you:
     vertical-align: baseline;
 }
 ```
+Usage
+```html
+<p>Here is some next that has a <a class="btn  btn--natural  btn--small  btn--secondary">button natural</a> in the middle of it.</p>
+```
 
 ##### $btn--disabled
+- Turn on/off disabled buttons for your application. If set to true a .btn--disabled class will be generated.
+- Use this if you will be having buttons that are disabled in your app.
 - Default: false;
 - Type: Boolean
-- If true the css for disabled buttons will be loaded.
-- Use this if you will be having buttons that are disabled in your app.
 ```css
 $btn--disabled: true;
 ```
@@ -220,13 +235,18 @@ Will give you:
     color: $btn-disabled-text-color !important;
 }
 ```
+Usage
+```html
+<a class="btn  btn--disabled">Disabled Primary Button</a>
+```
 
 #### Button Group
+- Turn on/off grouped buttons for your application. If set to true a .btn-group class will be generated.
+- Use this if you will be having buttons that are grouped together in your app.
+- You will need to have a wrapping div around your buttons that has the class .btn-group.
 - Default: false;
 - Type: Boolean
 - If true the css for button groups will be loaded.
-- Use this if you will be having buttons that are grouped together in your app.
-- You will need to have a wrapping div around your buttons that has the class .btn-group.
 ```css
 $btn-group: true;
 ```
@@ -243,6 +263,14 @@ Will give you:
 .btn-group > *{
     float: left;
 }
+```
+Usage
+```html
+<div class="btn-group">
+    <a class="btn  btn--small  btn--secondary">Button One</a>
+    <a class="btn  btn--small  btn--secondary">Button One</a>
+    <a class="btn  btn--small  btn--secondary">Button One</a>
+</div>
 ```
 
 #### Button Clean Up
