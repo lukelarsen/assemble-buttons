@@ -15,7 +15,7 @@
   "dependencies": {
     "object-assign": "^4.0.1",
     "postcss": "^5.0.0",
-    "postcss-assemble-button-helper": "^1.0.0"
+    "postcss-assemble-button-helper": "^1.0.1"
   },
   "devDependencies": {}
 }
