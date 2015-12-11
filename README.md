@@ -33,7 +33,7 @@ Then import the _assemble-buttons.css file from your css file.
 @import '../node_modules/assemble-base/base';
 
 /*
-Override variable here before the assemble components are loaded.
+Override variables here before the Assemble Components are loaded.
 */
 
 @import '../node_modules/assemble-buttons/assemble-buttons';
