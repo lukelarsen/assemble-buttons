@@ -233,15 +233,15 @@ $btn--disabled: true;
 Will give you:
 ```css
 .btn--disabled{
-    background-color: $btn-disabled-bg-color;
-    color: $btn-disabled-text-color;
+    background-color: $btn-disabled-bg-color !important;
+    color: $btn-disabled-text-color !important;
 }
 
-.btn-disabled:hover,
-.btn-disabled:active,
-.btn-disabled:focus{
+.btn--disabled:hover,
+.btn--disabled:active,
+.btn--disabled:focus{
     background-color: $btn-disabled-bg-color !important;
-    cursor: not-allowed;
+    cursor: not-allowed !important;
     color: $btn-disabled-text-color !important;
 }
 ```
