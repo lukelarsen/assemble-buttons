@@ -22,7 +22,6 @@
     !BUTTON BASE
 \*------------------------------------*/
 
-.debug{} /* This is here so the below .btn style will be generated. This is a really odd bug. The first class in this file doesn't get generated. */
 .btn{
     display: inline-block;
     margin: 0;
